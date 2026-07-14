@@ -25,14 +25,9 @@ export function Footer() {
                   (201) 677-3307
                 </a>
               </li>
-              <li>
-                <a
-                  href="mailto:info@notarycarolinabeelitz.com"
-                  className="flex items-center gap-3 text-sm text-primary-foreground/80 transition-colors hover:text-primary-foreground"
-                >
-                  <Mail className="size-4 text-gold" />
-                  info@notarycarolinabeelitz.com
-                </a>
+              <li className="flex items-center gap-3 text-sm text-primary-foreground/80">
+                <Mail className="size-4 text-gold" />
+                <span>Escríbenos para recibir nuestro email de contacto</span>
               </li>
               <li className="flex items-start gap-3 text-sm text-primary-foreground/80">
                 <MapPin className="size-4 shrink-0 text-gold" />

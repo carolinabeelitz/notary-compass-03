@@ -76,12 +76,9 @@ function ContactoPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Correo Electrónico</h3>
-                    <a
-                      href="mailto:info@notarycarolinabeelitz.com"
-                      className="mt-1 text-lg text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                      info@notarycarolinabeelitz.com
-                    </a>
+                    <p className="mt-1 text-lg text-muted-foreground">
+                      Solicítanos el email de contacto por teléfono
+                    </p>
                   </div>
                 </li>
 
