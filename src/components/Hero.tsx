@@ -58,7 +58,7 @@ export function Hero() {
                 width={1024}
                 height={1280}
                 className="size-full object-cover"
-                priority="true"
+                loading="eager"
               />
             </div>
           </div>
