@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Shield, Heart, Users, Award } from "lucide-react";
-import aboutPortrait from "@/assets/about-portrait.jpg";
+import aboutPortrait from "@/assets/about-portrait.jpeg.asset.json";
 
 const values = [
   {

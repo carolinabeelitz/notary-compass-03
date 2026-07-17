@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { CheckCircle, ArrowRight } from "lucide-react";
-import aboutPortrait from "@/assets/about-portrait.jpg";
+import aboutPortrait from "@/assets/about-portrait.jpeg.asset.json";
 
 const highlights = [
   "Atención personalizada en español e inglés",
