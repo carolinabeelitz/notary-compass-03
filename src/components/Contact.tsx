@@ -10,7 +10,7 @@ export function Contact() {
             ¿Listo para comenzar?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
-            Estamos en Freehold, New Jersey, listos para ayudarte con tus trámites legales y financieros.
+            Estamos en Freehold, New Jersey, listos para ayudarte con tus trámites notariales, migratorios y financieros.
           </p>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-3">

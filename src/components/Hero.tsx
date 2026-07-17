@@ -9,10 +9,10 @@ export function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="order-2 lg:order-1">
             <span className="inline-flex items-center rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
-              Servicios Legales & Contables
+              Servicios Notariales, Migratorios y de Impuestos
             </span>
             <h1 className="mt-6 font-serif text-4xl leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              Tu futuro legal en <span className="italic text-accent">manos expertas</span>.
+              Tus trámites en <span className="italic text-accent">manos expertas</span>.
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
               Notaría pública virtual y presencial, preparación de formas migratorias y declaración de impuestos para la comunidad de Freehold, NJ.
@@ -54,7 +54,7 @@ export function Hero() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-muted shadow-2xl shadow-primary/10">
               <img
                 src={heroDesk}
-                alt="Escritorio profesional con documentos legales, pluma y sello notarial"
+                alt="Escritorio profesional con documentos notariales, pluma y sello notarial"
                 width={1024}
                 height={1280}
                 className="size-full object-cover"

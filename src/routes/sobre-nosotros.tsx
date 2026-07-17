@@ -81,7 +81,7 @@ function SobreNosotrosPage() {
                 Experiencia y dedicación al servicio de la comunidad.
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                Notary Carolina Beelitz nace de la necesidad de ofrecer servicios legales y contables accesibles, claros y confiables para las familias de Freehold y sus alrededores. Entendemos que detrás de cada trámite hay una historia, un sueño y un futuro por construir.
+                Notary Carolina Beelitz nace de la necesidad de ofrecer servicios notariales, migratorios y de impuestos accesibles, claros y confiables para las familias de Freehold y sus alrededores. Entendemos que detrás de cada trámite hay una historia, un sueño y un futuro por construir.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
                 Ya sea que necesites notarizar un documento importante, preparar una forma migratoria o presentar tus impuestos, nuestro compromiso es guiarte con profesionalismo y trato humano.
