@@ -10,7 +10,7 @@ const services = [
       "Poderes notariales generales y especiales",
       "Testamentos y documentos de planificación patrimonial",
       "Actas de affidavit y juramentos",
-      "Autenticación de firmas en documentos legales",
+      "Autenticación de firmas en documentos notariales",
       "Servicio virtual (RON) y presencial a domicilio",
     ],
   },
@@ -67,7 +67,7 @@ function ServiciosPage() {
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">Nuestros Servicios</h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-primary-foreground/80">
-            Soluciones integrales para tus necesidades legales, migratorias y contables, con atención personalizada y profesional.
+            Soluciones integrales para tus necesidades notariales, migratorias y contables, con atención personalizada y profesional.
           </p>
         </div>
       </section>
