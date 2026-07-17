@@ -17,7 +17,7 @@ export function About() {
           <div className="relative">
             <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-primary-foreground/10">
               <img
-                src={aboutPortrait}
+                src={aboutPortrait.url}
                 alt="Carolina Beelitz, Notaria Pública profesional en su oficina"
                 width={1024}
                 height={1280}
