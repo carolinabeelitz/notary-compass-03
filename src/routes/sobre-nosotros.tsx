@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Shield, Heart, Users, Award } from "lucide-react";
-import aboutPortrait from "@/assets/about-portrait.jpg";
+import aboutPortrait from "@/assets/about-portrait.jpeg.asset.json";
 
 const values = [
   {
@@ -65,7 +65,7 @@ function SobreNosotrosPage() {
             <div className="relative">
               <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-muted shadow-xl shadow-primary/10">
                 <img
-                  src={aboutPortrait}
+                  src={aboutPortrait.url}
                   alt="Carolina Beelitz, Notaria Pública profesional"
                   width={1024}
                   height={1280}
