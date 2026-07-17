@@ -8,13 +8,13 @@ export const Route = createFileRoute("/contacto")({
       {
         name: "description",
         content:
-          "Contácta a Notary Carolina Beelitz en Freehold, New Jersey. Llama al (201) 677-3307 para notaría, inmigración e impuestos.",
+          "Contácta a Notary Carolina Beelitz en Freehold, New Jersey. Llama al (201) 667-3307 para notaría, inmigración e impuestos.",
       },
       { property: "og:title", content: "Contacto | Notary Carolina Beelitz" },
       {
         property: "og:description",
         content:
-          "Contácta a Notary Carolina Beelitz en Freehold, NJ. Llama al (201) 677-3307.",
+          "Contácta a Notary Carolina Beelitz en Freehold, NJ. Llama al (201) 667-3307.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/contacto" },
@@ -55,7 +55,7 @@ function ContactoPage() {
                       href="tel:+12016773307"
                       className="mt-1 text-lg text-muted-foreground transition-colors hover:text-foreground"
                     >
-                      (201) 677-3307
+                      (201) 667-3307
                     </a>
                   </div>
                 </li>

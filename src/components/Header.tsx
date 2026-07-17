@@ -43,7 +43,7 @@ export function Header() {
             className="flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             <Phone className="size-4" />
-            (201) 677-3307
+            (201) 667-3307
           </a>
           <Link
             to="/contacto"
@@ -81,7 +81,7 @@ export function Header() {
               className="flex items-center gap-2 rounded-md px-3 py-2 text-base font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             >
               <Phone className="size-4" />
-              (201) 677-3307
+              (201) 667-3307
             </a>
             <Link
               to="/contacto"

@@ -40,7 +40,7 @@ export function Hero() {
                 className="flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
                 <Phone className="size-4 text-accent" />
-                (201) 677-3307
+                (201) 667-3307
               </a>
               <span className="hidden h-4 w-px bg-border sm:block" />
               <span className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
