@@ -22,7 +22,7 @@ export function Footer() {
                   className="flex items-center gap-3 text-sm text-primary-foreground/80 transition-colors hover:text-primary-foreground"
                 >
                   <Phone className="size-4 text-gold" />
-                  (201) 677-3307
+                  (201) 667-3307
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm text-primary-foreground/80">

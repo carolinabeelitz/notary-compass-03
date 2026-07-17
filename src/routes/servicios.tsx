@@ -120,7 +120,7 @@ function ServiciosPage() {
                 className="inline-flex items-center justify-center gap-2 rounded-md border border-primary-foreground/20 px-6 py-3.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-foreground/10"
               >
                 <Phone className="size-4" />
-                (201) 677-3307
+                (201) 667-3307
               </a>
             </div>
           </div>

@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Servicios profesionales de notaría pública virtual y presencial, preparación de formas migratorias y declaración de impuestos en Freehold, New Jersey. Llama al (201) 677-3307.",
+          "Servicios profesionales de notaría pública virtual y presencial, preparación de formas migratorias y declaración de impuestos en Freehold, New Jersey. Llama al (201) 667-3307.",
       },
       {
         property: "og:title",

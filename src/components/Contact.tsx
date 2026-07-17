@@ -21,7 +21,7 @@ export function Contact() {
                 href="tel:+12016773307"
                 className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
-                (201) 677-3307
+                (201) 667-3307
               </a>
             </div>
             <div className="flex flex-col items-center gap-3 rounded-xl bg-muted p-6">
