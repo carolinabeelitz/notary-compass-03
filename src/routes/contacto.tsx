@@ -65,8 +65,15 @@ function ContactoPage() {
                     <MapPin className="size-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground">Ubicación</h3>
-                    <p className="mt-1 text-lg text-muted-foreground">Freehold, New Jersey</p>
+                    <h3 className="font-semibold text-foreground">Dirección</h3>
+                    <a
+                      href="https://maps.google.com/?q=52+Aberdare+Ct+Unit+2+Freehold+NJ+07728"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1 block text-lg text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                      52 Aberdare Ct Unit 2<br />Freehold, NJ 07728
+                    </a>
                   </div>
                 </li>
 
@@ -87,8 +94,13 @@ function ContactoPage() {
                     <Clock className="size-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground">Horario de Atención</h3>
-                    <p className="mt-1 text-lg text-muted-foreground">Lunes a Sábado: 9:00 AM - 6:00 PM</p>
+                    <h3 className="font-semibold text-foreground">Horario y Citas</h3>
+                    <p className="mt-1 text-lg text-muted-foreground">
+                      Lunes a Sábado: 9:00 AM - 6:00 PM
+                    </p>
+                    <p className="mt-1 text-base text-muted-foreground/80">
+                      Citas presenciales con dirección exacta al agendar. También disponible para citas virtuales y domingos bajo previa coordinación.
+                    </p>
                   </div>
                 </li>
               </ul>
