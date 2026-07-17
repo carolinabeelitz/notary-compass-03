@@ -26,8 +26,8 @@ export function Contact() {
             </div>
             <div className="flex flex-col items-center gap-3 rounded-xl bg-muted p-6">
               <MapPin className="size-6 text-accent" />
-              <span className="text-sm font-semibold text-foreground">Ubicación</span>
-              <span className="text-sm text-muted-foreground">Freehold, NJ</span>
+              <span className="text-sm font-semibold text-foreground">Dirección</span>
+              <span className="text-sm text-muted-foreground">52 Aberdare Ct Unit 2<br />Freehold, NJ 07728</span>
             </div>
             <div className="flex flex-col items-center gap-3 rounded-xl bg-muted p-6">
               <Clock className="size-6 text-accent" />

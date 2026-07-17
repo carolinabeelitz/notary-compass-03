@@ -31,7 +31,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3 text-sm text-primary-foreground/80">
                 <MapPin className="size-4 shrink-0 text-gold" />
-                <span>Freehold, New Jersey</span>
+                <span>52 Aberdare Ct Unit 2<br />Freehold, NJ 07728</span>
               </li>
               <li className="flex items-start gap-3 text-sm text-primary-foreground/80">
                 <Clock className="size-4 shrink-0 text-gold" />
