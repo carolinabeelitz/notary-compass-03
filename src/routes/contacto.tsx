@@ -1,6 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Phone, MapPin, Mail, Clock } from "lucide-react";
 
+const PHONE_NUMBER = "+12016673307";
+const PHONE_DISPLAY = "(201) 667-3307";
+const ADDRESS = "52 Aberdare Ct Unit 2, Freehold, NJ 07728";
+const MAPS_URL = "https://maps.google.com/?q=52+Aberdare+Ct+Unit+2+Freehold+NJ+07728";
+const WHATSAPP_URL = `https://wa.me/${PHONE_NUMBER.replace("+", "")}?text=${encodeURIComponent(
+  "Hola Carolina, vi su página web y me gustaría más información sobre sus servicios."
+)}`;
+
 export const Route = createFileRoute("/contacto")({
   head: () => ({
     meta: [
