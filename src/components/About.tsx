@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { CheckCircle, ArrowRight } from "lucide-react";
-import aboutPortrait from "@/assets/about-portrait.jpeg.asset.json";
+import aboutPortrait from "@/assets/about-portrait.jpeg";
 
 const highlights = [
   "Atención personalizada en español e inglés",
@@ -17,7 +17,7 @@ export function About() {
           <div className="relative">
             <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-primary-foreground/10">
               <img
-                src={aboutPortrait.url}
+                src={aboutPortrait}
                 alt="Carolina Beelitz, Notaria Pública profesional en su oficina"
                 width={1024}
                 height={1280}
