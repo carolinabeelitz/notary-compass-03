@@ -12,6 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SobreNosotrosRouteImport } from './routes/sobre-nosotros'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServiciosRouteImport } from './routes/servicios'
+import { Route as PrivacidadRouteImport } from './routes/privacidad'
+import { Route as PoliticaDeCancelacionRouteImport } from './routes/politica-de-cancelacion'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -30,6 +32,16 @@ const ServiciosRoute = ServiciosRouteImport.update({
   path: '/servicios',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacidadRoute = PrivacidadRouteImport.update({
+  id: '/privacidad',
+  path: '/privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDeCancelacionRoute = PoliticaDeCancelacionRouteImport.update({
+  id: '/politica-de-cancelacion',
+  path: '/politica-de-cancelacion',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactoRoute = ContactoRouteImport.update({
   id: '/contacto',
   path: '/contacto',
@@ -44,6 +56,8 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
+  '/politica-de-cancelacion': typeof PoliticaDeCancelacionRoute
+  '/privacidad': typeof PrivacidadRoute
   '/servicios': typeof ServiciosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nosotros': typeof SobreNosotrosRoute
@@ -51,6 +65,8 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
+  '/politica-de-cancelacion': typeof PoliticaDeCancelacionRoute
+  '/privacidad': typeof PrivacidadRoute
   '/servicios': typeof ServiciosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nosotros': typeof SobreNosotrosRoute
@@ -59,6 +75,8 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
+  '/politica-de-cancelacion': typeof PoliticaDeCancelacionRoute
+  '/privacidad': typeof PrivacidadRoute
   '/servicios': typeof ServiciosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre-nosotros': typeof SobreNosotrosRoute
@@ -68,15 +86,26 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/contacto'
+    | '/politica-de-cancelacion'
+    | '/privacidad'
     | '/servicios'
     | '/sitemap.xml'
     | '/sobre-nosotros'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contacto' | '/servicios' | '/sitemap.xml' | '/sobre-nosotros'
+  to:
+    | '/'
+    | '/contacto'
+    | '/politica-de-cancelacion'
+    | '/privacidad'
+    | '/servicios'
+    | '/sitemap.xml'
+    | '/sobre-nosotros'
   id:
     | '__root__'
     | '/'
     | '/contacto'
+    | '/politica-de-cancelacion'
+    | '/privacidad'
     | '/servicios'
     | '/sitemap.xml'
     | '/sobre-nosotros'
@@ -85,6 +114,8 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactoRoute: typeof ContactoRoute
+  PoliticaDeCancelacionRoute: typeof PoliticaDeCancelacionRoute
+  PrivacidadRoute: typeof PrivacidadRoute
   ServiciosRoute: typeof ServiciosRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SobreNosotrosRoute: typeof SobreNosotrosRoute
@@ -113,6 +144,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServiciosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacidad': {
+      id: '/privacidad'
+      path: '/privacidad'
+      fullPath: '/privacidad'
+      preLoaderRoute: typeof PrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-cancelacion': {
+      id: '/politica-de-cancelacion'
+      path: '/politica-de-cancelacion'
+      fullPath: '/politica-de-cancelacion'
+      preLoaderRoute: typeof PoliticaDeCancelacionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contacto': {
       id: '/contacto'
       path: '/contacto'
@@ -133,6 +178,8 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactoRoute: ContactoRoute,
+  PoliticaDeCancelacionRoute: PoliticaDeCancelacionRoute,
+  PrivacidadRoute: PrivacidadRoute,
   ServiciosRoute: ServiciosRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SobreNosotrosRoute: SobreNosotrosRoute,

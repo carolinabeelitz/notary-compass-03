@@ -1,5 +1,5 @@
-import { Link } from "@tanstack/react-router";
 import { Phone, MapPin, Clock, ArrowRight } from "lucide-react";
+import { BOOKING_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/site-config";
 
 export function Contact() {
   return (
@@ -18,10 +18,10 @@ export function Contact() {
               <Phone className="size-6 text-accent" />
               <span className="text-sm font-semibold text-foreground">Teléfono</span>
               <a
-                href="tel:+12016773307"
+                href={`tel:${PHONE_TEL}`}
                 className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
-                (201) 667-3307
+                {PHONE_DISPLAY}
               </a>
             </div>
             <div className="flex flex-col items-center gap-3 rounded-xl bg-muted p-6">
@@ -36,13 +36,13 @@ export function Contact() {
             </div>
           </div>
 
-          <Link
-            to="/contacto"
+          <a
+            href={BOOKING_URL}
             className="mt-10 inline-flex items-center justify-center gap-2 rounded-md bg-accent px-8 py-4 text-sm font-semibold uppercase tracking-widest text-accent-foreground shadow-lg shadow-accent/20 transition-colors hover:bg-accent/90"
           >
             Contactar Ahora
             <ArrowRight className="size-4" />
-          </Link>
+          </a>
         </div>
       </div>
     </section>

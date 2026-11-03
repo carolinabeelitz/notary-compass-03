@@ -1,11 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Phone, MapPin, Mail, Clock } from "lucide-react";
+import { PHONE_TEL, PHONE_DISPLAY } from "@/lib/site-config";
 
-const PHONE_NUMBER = "+12016673307";
-const PHONE_DISPLAY = "(201) 667-3307";
-const ADDRESS = "52 Aberdare Ct Unit 2, Freehold, NJ 07728";
 const MAPS_URL = "https://maps.google.com/?q=52+Aberdare+Ct+Unit+2+Freehold+NJ+07728";
-const WHATSAPP_URL = `https://wa.me/${PHONE_NUMBER.replace("+", "")}?text=${encodeURIComponent(
+const WHATSAPP_URL = `https://wa.me/${PHONE_TEL.replace("+", "")}?text=${encodeURIComponent(
   "Hola Carolina, vi su página web y me gustaría más información sobre sus servicios."
 )}`;
 
@@ -25,7 +23,7 @@ export const Route = createFileRoute("/contacto")({
           "Contácta a Notary Carolina Beelitz en Freehold, NJ. Llama al (201) 667-3307.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/contacto" },
+      { property: "og:url", content: "https://carolinabeelitz.com/contacto" },
     ],
   }),
   component: ContactoPage,
@@ -60,10 +58,10 @@ function ContactoPage() {
                   <div>
                     <h3 className="font-semibold text-foreground">Teléfono</h3>
                     <a
-                      href="tel:+12016773307"
+                      href={`tel:${PHONE_TEL}`}
                       className="mt-1 text-lg text-muted-foreground transition-colors hover:text-foreground"
                     >
-                      (201) 667-3307
+                      {PHONE_DISPLAY}
                     </a>
                   </div>
                 </li>
@@ -115,7 +113,7 @@ function ContactoPage() {
 
               <div className="mt-10 grid gap-3 sm:grid-cols-3">
                 <a
-                  href={`tel:${PHONE_NUMBER}`}
+                  href={`tel:${PHONE_TEL}`}
                   className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
                 >
                   <Phone className="size-4" />

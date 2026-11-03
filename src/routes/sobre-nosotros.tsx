@@ -41,7 +41,7 @@ export const Route = createFileRoute("/sobre-nosotros")({
           "Servicios de notaría, inmigración e impuestos con integridad y cercanía en Freehold, NJ.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/sobre-nosotros" },
+      { property: "og:url", content: "https://carolinabeelitz.com/sobre-nosotros" },
     ],
   }),
   component: SobreNosotrosPage,
@@ -54,7 +54,7 @@ function SobreNosotrosPage() {
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">Sobre Nosotros</h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-primary-foreground/80">
-            Un espacio de confianza donde tus documentos, trámites y finanzas están en manos expertas.
+            Un espacio de confianza donde tus documentos, trámites y finanzas están en manos profesionales.
           </p>
         </div>
       </section>

@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/Hero";
 import { TrustBar } from "@/components/TrustBar";
 import { Services } from "@/components/Services";
+import { Testimonials } from "@/components/Testimonials";
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
 
@@ -24,7 +25,7 @@ export const Route = createFileRoute("/")({
           "Servicios profesionales de notaría pública virtual y presencial, preparación de formas migratorias y declaración de impuestos en Freehold, NJ.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://carolinabeelitz.com/" },
     ],
   }),
   component: Index,
@@ -36,6 +37,7 @@ function Index() {
       <Hero />
       <TrustBar />
       <Services />
+      <Testimonials />
       <About />
       <Contact />
     </>

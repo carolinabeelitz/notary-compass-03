@@ -13,7 +13,7 @@ const credentials = [
   },
   {
     icon: Award,
-    title: "Especialista Migratoria",
+    title: "Preparación de Formularios Migratorios",
     description: "Peticiones familiares y ciudadanía",
   },
 ];
