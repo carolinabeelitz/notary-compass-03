@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, MapPin, Mail, Clock } from "lucide-react";
+import { LegalDisclaimer } from "@/components/LegalDisclaimer";
+import { PHONE_TEL, PHONE_DISPLAY, CONTACT_EMAIL, LEGAL_NAME } from "@/lib/site-config";
 
 export function Footer() {
   return (
@@ -11,6 +13,9 @@ export function Footer() {
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-primary-foreground/80">
               Servicios profesionales de notaría, preparación de formas migratorias y preparación de impuestos en Freehold, New Jersey.
             </p>
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-primary-foreground/60">
+              Notary Carolina Beelitz es un servicio de {LEGAL_NAME}.
+            </p>
           </div>
 
           <div>
@@ -18,16 +23,21 @@ export function Footer() {
             <ul className="mt-6 space-y-4">
               <li>
                 <a
-                  href="tel:+12016773307"
+                  href={`tel:${PHONE_TEL}`}
                   className="flex items-center gap-3 text-sm text-primary-foreground/80 transition-colors hover:text-primary-foreground"
                 >
                   <Phone className="size-4 text-gold" />
-                  (201) 667-3307
+                  {PHONE_DISPLAY}
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-sm text-primary-foreground/80">
-                <Mail className="size-4 text-gold" />
-                <span>Escríbenos para recibir nuestro email de contacto</span>
+              <li>
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="flex items-center gap-3 text-sm text-primary-foreground/80 transition-colors hover:text-primary-foreground"
+                >
+                  <Mail className="size-4 text-gold" />
+                  {CONTACT_EMAIL}
+                </a>
               </li>
               <li className="flex items-start gap-3 text-sm text-primary-foreground/80">
                 <MapPin className="size-4 shrink-0 text-gold" />
@@ -63,8 +73,22 @@ export function Footer() {
                   Contacto
                 </Link>
               </li>
+              <li>
+                <Link to="/privacidad" className="text-sm text-primary-foreground/80 transition-colors hover:text-primary-foreground">
+                  Privacidad
+                </Link>
+              </li>
+              <li>
+                <Link to="/politica-de-cancelacion" className="text-sm text-primary-foreground/80 transition-colors hover:text-primary-foreground">
+                  Política de Cancelación
+                </Link>
+              </li>
             </ul>
           </div>
+        </div>
+
+        <div className="mt-10 border-t border-primary-foreground/10 pt-8">
+          <LegalDisclaimer variant="footer" />
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-primary-foreground/10 pt-8 md:flex-row">

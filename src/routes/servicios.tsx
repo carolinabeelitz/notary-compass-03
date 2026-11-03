@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Stamp, FileText, Calculator, Phone, MapPin, ArrowRight } from "lucide-react";
-import { Link } from "@tanstack/react-router";
+import { Stamp, FileText, Calculator, Phone, ArrowRight } from "lucide-react";
+import { LegalDisclaimer } from "@/components/LegalDisclaimer";
+import { BOOKING_URL, PHONE_TEL, PHONE_DISPLAY, CONSULTATION_PRICE } from "@/lib/site-config";
 
 const services = [
   {
@@ -54,7 +55,7 @@ export const Route = createFileRoute("/servicios")({
           "Servicios de notaría pública, preparación de formas migratorias y declaración de impuestos en Freehold, NJ.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/servicios" },
+      { property: "og:url", content: "https://carolinabeelitz.com/servicios" },
     ],
   }),
   component: ServiciosPage,
@@ -95,6 +96,10 @@ function ServiciosPage() {
               </div>
             ))}
           </div>
+
+          <div className="mt-10 max-w-3xl">
+            <LegalDisclaimer variant="section" />
+          </div>
         </div>
       </section>
 
@@ -106,21 +111,24 @@ function ServiciosPage() {
               <p className="mt-3 text-primary-foreground/80">
                 Contáctanos hoy mismo y recibe una orientación clara sobre el próximo paso.
               </p>
+              <p className="mt-4 max-w-xl text-sm text-primary-foreground/70">
+                Consulta inicial: {CONSULTATION_PRICE}. Este pago no es reembolsable y se abona al costo de tu servicio si decides continuar.
+              </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Link
-                to="/contacto"
+              <a
+                href={BOOKING_URL}
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-6 py-3.5 text-sm font-semibold uppercase tracking-widest text-accent-foreground transition-colors hover:bg-accent/90"
               >
                 Contactar
                 <ArrowRight className="size-4" />
-              </Link>
+              </a>
               <a
-                href="tel:+12016773307"
+                href={`tel:${PHONE_TEL}`}
                 className="inline-flex items-center justify-center gap-2 rounded-md border border-primary-foreground/20 px-6 py-3.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-foreground/10"
               >
                 <Phone className="size-4" />
-                (201) 667-3307
+                {PHONE_DISPLAY}
               </a>
             </div>
           </div>

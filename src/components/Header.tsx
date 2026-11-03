@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone } from "lucide-react";
+import { BOOKING_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/site-config";
 
 const navLinks = [
   { to: "/", label: "Inicio" },
@@ -39,18 +40,18 @@ export function Header() {
 
         <div className="hidden items-center gap-4 md:flex">
           <a
-            href="tel:+12016773307"
+            href={`tel:${PHONE_TEL}`}
             className="flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             <Phone className="size-4" />
-            (201) 667-3307
+            {PHONE_DISPLAY}
           </a>
-          <Link
-            to="/contacto"
+          <a
+            href={BOOKING_URL}
             className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Agendar Cita
-          </Link>
+          </a>
         </div>
 
         <button
@@ -77,19 +78,19 @@ export function Header() {
               </Link>
             ))}
             <a
-              href="tel:+12016773307"
+              href={`tel:${PHONE_TEL}`}
               className="flex items-center gap-2 rounded-md px-3 py-2 text-base font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             >
               <Phone className="size-4" />
-              (201) 667-3307
+              {PHONE_DISPLAY}
             </a>
-            <Link
-              to="/contacto"
+            <a
+              href={BOOKING_URL}
               onClick={() => setIsOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-md bg-primary px-5 py-3 text-center text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Agendar Cita
-            </Link>
+            </a>
           </nav>
         </div>
       )}

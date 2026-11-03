@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Stamp, FileText, Calculator, ArrowRight } from "lucide-react";
+import { LegalDisclaimer } from "@/components/LegalDisclaimer";
 
 const services = [
   {
@@ -15,7 +16,7 @@ const services = [
     number: "02",
     title: "Formas Migratorias",
     description:
-      "Preparación experta de peticiones familiares, ajuste de estatus, ciudadanía naturalizada y permisos de trabajo. Asesoría paso a paso en español.",
+      "Preparación de peticiones familiares, ajuste de estatus, ciudadanía naturalizada y permisos de trabajo. Te ayudamos a llenar tus formularios en español.",
     href: "/servicios",
   },
   {
@@ -23,7 +24,7 @@ const services = [
     number: "03",
     title: "Preparación de Impuestos",
     description:
-      "Declaraciones federales y estatales para individuos y pequeños negocios. Maximizamos tu reembolso con precisión y cumplimiento ante el IRS.",
+      "Declaraciones federales y estatales para individuos y pequeños negocios. Preparamos tu declaración con precisión y en cumplimiento con el IRS.",
     href: "/servicios",
   },
 ];
@@ -65,6 +66,10 @@ export function Services() {
               </Link>
             </div>
           ))}
+        </div>
+
+        <div className="mt-10 max-w-3xl">
+          <LegalDisclaimer variant="section" />
         </div>
       </div>
     </section>

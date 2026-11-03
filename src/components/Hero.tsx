@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, MapPin, ArrowRight } from "lucide-react";
 import heroDesk from "@/assets/hero-desk.jpg";
+import { BOOKING_URL, PHONE_TEL, PHONE_DISPLAY, CONSULTATION_PRICE } from "@/lib/site-config";
 
 export function Hero() {
   return (
@@ -12,20 +13,20 @@ export function Hero() {
               Servicios Notariales, Migratorios y de Impuestos
             </span>
             <h1 className="mt-6 font-serif text-4xl leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              Tus trámites en <span className="italic text-accent">manos expertas</span>.
+              Tus trámites en <span className="italic text-accent">manos profesionales</span>.
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
               Notaría pública virtual y presencial, preparación de formas migratorias y declaración de impuestos para la comunidad de Freehold, NJ.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                to="/contacto"
+              <a
+                href={BOOKING_URL}
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 Agendar Cita
                 <ArrowRight className="size-4" />
-              </Link>
+              </a>
               <Link
                 to="/servicios"
                 className="inline-flex items-center justify-center rounded-md border border-input bg-background px-6 py-3.5 text-sm font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
@@ -34,13 +35,17 @@ export function Hero() {
               </Link>
             </div>
 
+            <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted-foreground">
+              Consulta inicial: {CONSULTATION_PRICE}. Este pago no es reembolsable y se abona al costo de tu servicio si decides continuar.
+            </p>
+
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
               <a
-                href="tel:+12016773307"
+                href={`tel:${PHONE_TEL}`}
                 className="flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
                 <Phone className="size-4 text-accent" />
-                (201) 667-3307
+                {PHONE_DISPLAY}
               </a>
               <span className="hidden h-4 w-px bg-border sm:block" />
               <span className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
