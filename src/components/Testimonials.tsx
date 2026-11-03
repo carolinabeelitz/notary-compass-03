@@ -51,7 +51,7 @@ function Stars() {
 
 export function Testimonials() {
   return (
-    <section className="w-full bg-muted/30 py-20 lg:py-28">
+    <section className="w-full border-y border-border bg-muted/50 py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-2xl">
