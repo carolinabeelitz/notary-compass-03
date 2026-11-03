@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, MapPin, ArrowRight } from "lucide-react";
 import heroDesk from "@/assets/hero-desk.jpg";
-import { BOOKING_URL, PHONE_TEL, PHONE_DISPLAY, CONSULTATION_PRICE } from "@/lib/site-config";
+import { BOOKING_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/site-config";
 
 export function Hero() {
   return (
@@ -34,10 +34,6 @@ export function Hero() {
                 Ver Servicios
               </Link>
             </div>
-
-            <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted-foreground">
-              Consulta inicial: {CONSULTATION_PRICE}. Este pago no es reembolsable y se abona al costo de tu servicio si decides continuar.
-            </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
               <a

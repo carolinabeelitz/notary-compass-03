@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, MapPin, Mail, Clock } from "lucide-react";
-import { LegalDisclaimer } from "@/components/LegalDisclaimer";
 import { PHONE_TEL, PHONE_DISPLAY, CONTACT_EMAIL, LEGAL_NAME } from "@/lib/site-config";
 
 export function Footer() {
@@ -85,10 +84,6 @@ export function Footer() {
               </li>
             </ul>
           </div>
-        </div>
-
-        <div className="mt-10 border-t border-primary-foreground/10 pt-8">
-          <LegalDisclaimer variant="footer" />
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-primary-foreground/10 pt-8 md:flex-row">

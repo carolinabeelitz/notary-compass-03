@@ -65,7 +65,6 @@ export function Testimonials() {
             <div className="flex items-center gap-2">
               <span className="font-serif text-xl font-bold text-foreground">5.0</span>
               <Stars />
-              <span className="text-sm text-muted-foreground">· 4 reseñas</span>
             </div>
           </div>
         </div>
@@ -83,7 +82,6 @@ export function Testimonials() {
                   </div>
                   <div>
                     <figcaption className="text-sm font-semibold text-foreground">{r.name}</figcaption>
-                    <p className="text-xs text-muted-foreground">{r.date}</p>
                   </div>
                 </div>
                 <GoogleG className="size-5 shrink-0" />

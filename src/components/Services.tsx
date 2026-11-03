@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { Stamp, FileText, Calculator, ArrowRight } from "lucide-react";
-import { LegalDisclaimer } from "@/components/LegalDisclaimer";
 
 const services = [
   {
@@ -66,10 +65,6 @@ export function Services() {
               </Link>
             </div>
           ))}
-        </div>
-
-        <div className="mt-10 max-w-3xl">
-          <LegalDisclaimer variant="section" />
         </div>
       </div>
     </section>

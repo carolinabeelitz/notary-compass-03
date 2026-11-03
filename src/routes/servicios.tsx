@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Stamp, FileText, Calculator, Phone, ArrowRight } from "lucide-react";
-import { LegalDisclaimer } from "@/components/LegalDisclaimer";
-import { BOOKING_URL, PHONE_TEL, PHONE_DISPLAY, CONSULTATION_PRICE } from "@/lib/site-config";
+import { BOOKING_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/site-config";
 
 const services = [
   {
@@ -96,10 +95,6 @@ function ServiciosPage() {
               </div>
             ))}
           </div>
-
-          <div className="mt-10 max-w-3xl">
-            <LegalDisclaimer variant="section" />
-          </div>
         </div>
       </section>
 
@@ -110,9 +105,6 @@ function ServiciosPage() {
               <h2 className="font-serif text-2xl tracking-tight sm:text-3xl">¿Tienes dudas sobre tu trámite?</h2>
               <p className="mt-3 text-primary-foreground/80">
                 Contáctanos hoy mismo y recibe una orientación clara sobre el próximo paso.
-              </p>
-              <p className="mt-4 max-w-xl text-sm text-primary-foreground/70">
-                Consulta inicial: {CONSULTATION_PRICE}. Este pago no es reembolsable y se abona al costo de tu servicio si decides continuar.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
