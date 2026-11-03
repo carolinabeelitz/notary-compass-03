@@ -25,7 +25,7 @@ export function WhatsAppButton() {
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
       className={[
-        "fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full px-4 py-3 shadow-lg transition-all duration-300",
+        "fixed bottom-24 right-6 z-50 flex items-center gap-2 rounded-full px-4 py-3 shadow-lg transition-all duration-300",
         "bg-[#25D366] text-white hover:bg-[#1ebe57] hover:shadow-xl hover:-translate-y-0.5",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
         isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0 pointer-events-none",
