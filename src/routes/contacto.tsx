@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Phone, MapPin, Mail, Clock, ShieldCheck } from "lucide-react";
-import { PHONE_TEL, PHONE_DISPLAY } from "@/lib/site-config";
+import { PHONE_TEL, PHONE_DISPLAY, BOOKING_EMBED_URL } from "@/lib/site-config";
 
 function WhatsAppGlyph({ className }: { className?: string }) {
   return (
@@ -175,93 +175,113 @@ function ContactoPage() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-border bg-card p-8 shadow-xl shadow-primary/5">
-              <h3 className="font-serif text-2xl text-card-foreground">Solicita una Cita</h3>
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-xl shadow-primary/5 sm:p-8">
+              <h3 className="font-serif text-2xl text-card-foreground">Agenda tu cita</h3>
               <p className="mt-2 text-muted-foreground">
-                Completa el formulario y nos pondremos en contacto contigo lo antes posible.
+                Elige el día y la hora que prefieras en el calendario.
               </p>
-
-              <form className="mt-8 space-y-5" onSubmit={handleSubmit}>
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground">
-                    Nombre completo
-                  </label>
-                  <input
-                    id="name"
-                    type="text"
-                    required
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder="Tu nombre"
-                    className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm text-foreground outline-none ring-offset-background transition-colors focus-visible:ring-2 focus-visible:ring-ring"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-foreground">
-                    Teléfono
-                  </label>
-                  <input
-                    id="phone"
-                    type="tel"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    placeholder="(201) 000-0000"
-                    className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm text-foreground outline-none ring-offset-background transition-colors focus-visible:ring-2 focus-visible:ring-ring"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-foreground">
-                    Servicio de interés
-                  </label>
-                  <select
-                    id="service"
-                    value={service}
-                    onChange={(e) => setService(e.target.value)}
-                    className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm text-foreground outline-none ring-offset-background transition-colors focus-visible:ring-2 focus-visible:ring-ring"
-                  >
-                    <option>Notaría Pública</option>
-                    <option>Formularios Migratorios</option>
-                    <option>Preparación de Impuestos</option>
-                    <option>Otro</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground">
-                    Mensaje
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Cuéntanos brevemente cómo podemos ayudarte"
-                    className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm text-foreground outline-none ring-offset-background transition-colors focus-visible:ring-2 focus-visible:ring-ring"
-                  />
-                  <p className="mt-2 flex items-start gap-2 text-xs leading-relaxed text-muted-foreground">
-                    <ShieldCheck className="mt-0.5 size-4 shrink-0 text-accent" />
-                    No incluya datos personales sensibles (pasaporte, número de inmigración, Seguro Social).
-                  </p>
-                </div>
-
-                <button
-                  type="submit"
-                  className="flex w-full items-center justify-center gap-2.5 rounded-md bg-primary px-6 py-3.5 text-sm font-semibold uppercase tracking-widest text-primary-foreground transition-colors hover:bg-primary/90"
-                >
-                  <WhatsAppGlyph className="size-5" />
-                  Enviar por WhatsApp
-                </button>
-
-                <p className="text-center text-sm text-muted-foreground">
-                  ¿No tiene WhatsApp?{" "}
-                  <a href={`tel:${PHONE_TEL}`} className="font-semibold text-primary transition-colors hover:underline">
-                    Llámenos al {PHONE_DISPLAY}
-                  </a>
-                </p>
-              </form>
+              <div className="mt-6 overflow-hidden rounded-xl border border-border">
+                <iframe
+                  src={BOOKING_EMBED_URL}
+                  title="Agendar cita"
+                  loading="lazy"
+                  className="h-[640px] w-full"
+                  style={{ border: 0 }}
+                />
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-muted/40 py-20 lg:py-28">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl border border-border bg-card p-8 shadow-xl shadow-primary/5">
+            <h3 className="font-serif text-2xl text-card-foreground">¿Tienes preguntas antes de agendar?</h3>
+            <p className="mt-2 text-muted-foreground">
+              Escríbenos por WhatsApp y te respondemos. Para reservar tu cita, usa el calendario de arriba.
+            </p>
+
+            <form className="mt-8 space-y-5" onSubmit={handleSubmit}>
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-foreground">
+                  Nombre completo
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Tu nombre"
+                  className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm text-foreground outline-none ring-offset-background transition-colors focus-visible:ring-2 focus-visible:ring-ring"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-foreground">
+                  Teléfono
+                </label>
+                <input
+                  id="phone"
+                  type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="(201) 000-0000"
+                  className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm text-foreground outline-none ring-offset-background transition-colors focus-visible:ring-2 focus-visible:ring-ring"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="service" className="block text-sm font-medium text-foreground">
+                  Servicio de interés
+                </label>
+                <select
+                  id="service"
+                  value={service}
+                  onChange={(e) => setService(e.target.value)}
+                  className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm text-foreground outline-none ring-offset-background transition-colors focus-visible:ring-2 focus-visible:ring-ring"
+                >
+                  <option>Notaría Pública</option>
+                  <option>Formularios Migratorios</option>
+                  <option>Preparación de Impuestos</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-foreground">
+                  Mensaje
+                </label>
+                <textarea
+                  id="message"
+                  rows={4}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Cuéntanos brevemente cómo podemos ayudarte"
+                  className="mt-2 w-full rounded-md border border-input bg-background px-4 py-3 text-sm text-foreground outline-none ring-offset-background transition-colors focus-visible:ring-2 focus-visible:ring-ring"
+                />
+                <p className="mt-2 flex items-start gap-2 text-xs leading-relaxed text-muted-foreground">
+                  <ShieldCheck className="mt-0.5 size-4 shrink-0 text-accent" />
+                  No incluya datos personales sensibles (pasaporte, número de inmigración, Seguro Social).
+                </p>
+              </div>
+
+              <button
+                type="submit"
+                className="flex w-full items-center justify-center gap-2.5 rounded-md bg-primary px-6 py-3.5 text-sm font-semibold uppercase tracking-widest text-primary-foreground transition-colors hover:bg-primary/90"
+              >
+                <WhatsAppGlyph className="size-5" />
+                Enviar por WhatsApp
+              </button>
+
+              <p className="text-center text-sm text-muted-foreground">
+                ¿No tiene WhatsApp?{" "}
+                <a href={`tel:${PHONE_TEL}`} className="font-semibold text-primary transition-colors hover:underline">
+                  Llámenos al {PHONE_DISPLAY}
+                </a>
+              </p>
+            </form>
           </div>
         </div>
       </section>
