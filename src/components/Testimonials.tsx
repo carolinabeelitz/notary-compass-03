@@ -69,11 +69,18 @@ export function Testimonials() {
           </div>
         </div>
 
-        <div className="-mx-4 flex snap-x gap-6 overflow-x-auto px-4 pb-4 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4">
-          {reviews.map((r) => (
+        <div className="group relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
+          <style>{`
+            @keyframes testimonials-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+            .testimonials-track { animation: testimonials-marquee 40s linear infinite; }
+            @media (prefers-reduced-motion: reduce) { .testimonials-track { animation: none; } }
+          `}</style>
+          <div className="testimonials-track flex w-max gap-6 group-hover:[animation-play-state:paused]">
+            {[...reviews, ...reviews].map((r, i) => (
             <figure
-              key={r.name}
-              className="flex min-w-[80%] snap-start flex-col rounded-2xl border border-border bg-card p-6 shadow-sm sm:min-w-0"
+              key={`${r.name}-${i}`}
+              aria-hidden={i >= reviews.length}
+              className="flex w-[300px] shrink-0 flex-col rounded-2xl border border-border bg-card p-6 shadow-sm sm:w-[360px]"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -93,7 +100,8 @@ export function Testimonials() {
                 {r.text}
               </blockquote>
             </figure>
-          ))}
+            ))}
+          </div>
         </div>
 
         <div className="mt-10 text-center">

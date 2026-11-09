@@ -48,6 +48,8 @@ export function Header() {
           </a>
           <a
             href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Agendar Cita
@@ -86,6 +88,8 @@ export function Header() {
             </a>
             <a
               href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-md bg-primary px-5 py-3 text-center text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >

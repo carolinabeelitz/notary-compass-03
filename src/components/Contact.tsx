@@ -38,6 +38,8 @@ export function Contact() {
 
           <a
             href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-10 inline-flex items-center justify-center gap-2 rounded-md bg-accent px-8 py-4 text-sm font-semibold uppercase tracking-widest text-accent-foreground shadow-lg shadow-accent/20 transition-colors hover:bg-accent/90"
           >
             Contactar Ahora
