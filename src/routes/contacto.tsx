@@ -58,7 +58,7 @@ function ContactoPage() {
 
   return (
     <main className="min-h-screen bg-background">
-      <section className="bg-primary py-20 text-primary-foreground lg:py-28">
+      <section className="bg-primary py-14 text-primary-foreground lg:py-20">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">Contacto</h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-primary-foreground/80">
@@ -67,7 +67,7 @@ function ContactoPage() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-28">
+      <section className="py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
@@ -178,7 +178,7 @@ function ContactoPage() {
             <div className="rounded-2xl border border-border bg-card p-6 shadow-xl shadow-primary/5 sm:p-8">
               <h3 className="font-serif text-2xl text-card-foreground">Agenda tu cita</h3>
               <p className="mt-2 text-muted-foreground">
-                Elige el día y la hora que prefieras en el calendario.
+                Elige el día y la hora que prefieras en el calendario. La cita es por Google Meet; la confirmación y el enlace te llegan por correo.
               </p>
               <div className="mt-6 overflow-hidden rounded-xl border border-border">
                 <iframe
@@ -194,7 +194,7 @@ function ContactoPage() {
         </div>
       </section>
 
-      <section className="border-t border-border bg-muted/40 py-20 lg:py-28">
+      <section className="border-t border-border bg-muted py-16 lg:py-24">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-border bg-card p-8 shadow-xl shadow-primary/5">
             <h3 className="font-serif text-2xl text-card-foreground">¿Tienes preguntas antes de agendar?</h3>

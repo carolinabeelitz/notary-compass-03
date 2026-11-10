@@ -50,7 +50,7 @@ export const Route = createFileRoute("/sobre-nosotros")({
 function SobreNosotrosPage() {
   return (
     <main className="min-h-screen bg-background">
-      <section className="bg-primary py-20 text-primary-foreground lg:py-28">
+      <section className="bg-primary py-14 text-primary-foreground lg:py-20">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">Sobre Nosotros</h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-primary-foreground/80">
@@ -59,7 +59,7 @@ function SobreNosotrosPage() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-28">
+      <section className="py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="relative">
@@ -91,11 +91,12 @@ function SobreNosotrosPage() {
         </div>
       </section>
 
-      <section className="border-y border-border bg-muted/30 py-20 lg:py-28">
+      <section className="border-y border-border bg-muted py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-14 text-center">
+          <div className="mb-14 max-w-2xl">
             <h2 className="font-serif text-3xl tracking-tight text-foreground sm:text-4xl">Nuestros Valores</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+            <div className="mt-4 h-1 w-16 bg-accent" />
+            <p className="mt-6 max-w-2xl text-muted-foreground">
               Principios que guían cada interacción con nuestros clientes.
             </p>
           </div>

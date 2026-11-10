@@ -11,7 +11,7 @@ const highlights = [
 
 export function About() {
   return (
-    <section className="w-full bg-primary py-20 text-primary-foreground lg:py-28">
+    <section className="w-full bg-primary py-16 text-primary-foreground lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="relative">

@@ -3,7 +3,7 @@ import { BOOKING_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/site-config";
 
 export function Contact() {
   return (
-    <section className="w-full bg-background py-20 lg:py-28">
+    <section className="w-full bg-background py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl rounded-3xl border border-border bg-card p-8 text-center shadow-xl shadow-primary/5 sm:p-12">
           <h2 className="font-serif text-3xl tracking-tight text-card-foreground sm:text-4xl">
@@ -40,7 +40,7 @@ export function Contact() {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-10 inline-flex items-center justify-center gap-2 rounded-md bg-accent px-8 py-4 text-sm font-semibold uppercase tracking-widest text-accent-foreground shadow-lg shadow-accent/20 transition-colors hover:bg-accent/90"
+            className="mt-10 inline-flex items-center justify-center gap-2 rounded-md bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:bg-primary/90 hover:-translate-y-0.5"
           >
             Agendar Cita
             <ArrowRight className="size-4" />

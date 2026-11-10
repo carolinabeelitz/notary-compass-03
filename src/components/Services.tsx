@@ -30,7 +30,7 @@ const services = [
 
 export function Services() {
   return (
-    <section className="w-full bg-background py-20 lg:py-28" id="servicios">
+    <section className="w-full bg-background py-16 lg:py-24" id="servicios">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-14 max-w-2xl">
           <h2 className="font-serif text-3xl tracking-tight text-foreground sm:text-4xl">

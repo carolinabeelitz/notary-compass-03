@@ -30,7 +30,7 @@ export function Header() {
             <Link
               key={link.to}
               to={link.to}
-              activeProps={{ className: "text-foreground" }}
+              activeProps={{ className: "text-accent font-semibold" }}
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}

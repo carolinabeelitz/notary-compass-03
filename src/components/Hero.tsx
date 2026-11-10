@@ -6,7 +6,7 @@ import { BOOKING_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/site-config";
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-background">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-20">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="order-2 lg:order-1">
             <span className="inline-flex items-center rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
@@ -24,7 +24,7 @@ export function Hero() {
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20"
               >
                 Agendar Cita
                 <ArrowRight className="size-4" />

@@ -63,7 +63,7 @@ export const Route = createFileRoute("/servicios")({
 function ServiciosPage() {
   return (
     <main className="min-h-screen bg-background">
-      <section className="bg-primary py-20 text-primary-foreground lg:py-28">
+      <section className="bg-primary py-14 text-primary-foreground lg:py-20">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl tracking-tight sm:text-5xl">Nuestros Servicios</h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-primary-foreground/80">
@@ -72,7 +72,7 @@ function ServiciosPage() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-28">
+      <section className="py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-3">
             {services.map((service) => (
@@ -98,7 +98,7 @@ function ServiciosPage() {
         </div>
       </section>
 
-      <section className="border-t border-border bg-muted/30 py-16">
+      <section className="border-t border-border bg-muted py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-between gap-8 rounded-2xl bg-primary p-8 text-primary-foreground shadow-xl shadow-primary/10 lg:flex-row lg:p-12">
             <div>
@@ -110,9 +110,11 @@ function ServiciosPage() {
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href={BOOKING_URL}
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-6 py-3.5 text-sm font-semibold uppercase tracking-widest text-accent-foreground transition-colors hover:bg-accent/90"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-6 py-3.5 text-sm font-semibold text-accent-foreground transition-all hover:bg-accent/90 hover:-translate-y-0.5"
               >
-                Contactar
+                Agendar Cita
                 <ArrowRight className="size-4" />
               </a>
               <a
